@@ -25,4 +25,4 @@ test:
 production:
   adapter: postgresql
   <<: *default
-  database: postgresql-cylindrical-54788
+  database: my_database_production
