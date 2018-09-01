@@ -9,7 +9,10 @@
   </head>
 
   <body>
+  	<%= render 'layouts/navigation_bar' %>
   	<%= render 'layouts/messages' %>
-    <%= yield %>
+    <div class="center container">
+      <%= yield %>
+    </div>
   </body>
 </html>
