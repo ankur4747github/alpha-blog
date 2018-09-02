@@ -17,14 +17,12 @@ $navbar-default-bg: black;
 	text-decoration: none;
 }
 
-.center{
-	text-align: center;
-}
 
 .jumbotron{
 	background-image: asset-url('background_home.jpg');
 	background-size: cover;
 	height: 550px;
+	text-align: center;
 }
 
 .jumbotron h1{
