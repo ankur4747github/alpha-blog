@@ -1,12 +1,17 @@
-<h1>Showing Selected Article</h1>
+<h1 align="center" font-weight="strong" >Title: <%= @article.title %></h1>
 
-<p>
-	Title:- <%= @article.title %>
-</p>
+<div class="well col-xs-8 col-xs-offset-2">
+	<h4 class="description" align="center"><strong>Description:</strong></h4>
+	<hr>
+	<%= simple_format(@article.description) %>
 
-<p>
-	Description:- <%= @article.description %>
-</p>
+	<div class="article-actions">
+		<%= link_to "Edit this Article", edit_article_path(@article),class: 'btn btn-primary btn-sm'  %> 
+		<%= link_to "Delte this Article", article_path(@article), method: :delete,
+										  data: {confirm: 'You want to delete this article?'},
+										  class: 'btn btn-danger btn-sm' %> 
+	    <%= link_to "View all Articles", articles_path,class: 'btn btn-success btn-sm'  %>
+    </div>
+</div>
 
-<%= link_to "Edit Article", edit_article_path(@article)  %> |
-<%= link_to "Back to Articles", articles_path  %>
+
